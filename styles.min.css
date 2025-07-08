@@ -1,5 +1,5 @@
 /* ===== LUAE TAROT - CSS CONCATENADO ===== */
-/* Build: 2025-07-08T19:28:47.944Z */
+/* Build: 2025-07-08T20:06:41.079Z */
 
 /* === styles.css === */
 * {
@@ -680,6 +680,132 @@ body {
   }
   .footer-sep {
     display: none;
+  }
+} 
+
+/* ===== SELETOR DE IDIOMA ===== */
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  position: relative;
+}
+
+.language-btn {
+  background: #e9eaf3;
+  border: 1px solid #d3d6e6;
+  color: #091336;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 45px;
+  justify-content: center;
+}
+
+.language-btn:hover {
+  background: #d3d6e6;
+  border-color: #091336;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.language-btn.active {
+  background: #091336;
+  color: #fff;
+  border-color: #091336;
+  font-weight: 600;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+/* Removendo as bandeiras e deixando apenas as siglas */
+
+.language-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .language-selector {
+    margin-left: 0.5rem;
+  }
+  
+  .language-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    min-width: 40px;
+  }
+  
+  .language-btn::before {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-selector {
+    margin-left: 0.3rem;
+  }
+  
+  .language-btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    min-width: 35px;
+  }
+} 
+
+/* ===== ANIMAÇÕES DE TRADUÇÃO ===== */
+.translating [data-translate] {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* ===== NOTIFICAÇÃO DE IDIOMA ===== */
+.language-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(9, 19, 54, 0.95);
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 10000;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+}
+
+.language-notification.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.language-notification span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .language-notification {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    transform: translateY(-100%);
+    text-align: center;
+  }
+  
+  .language-notification.show {
+    transform: translateY(0);
   }
 } 
 

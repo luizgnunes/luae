@@ -22,6 +22,7 @@ const buildConfig = {
     'utilities.css'
   ],
   jsFiles: [
+    'translations.js',
     'config.js',
     'utils.js',
     'navigation.js',
