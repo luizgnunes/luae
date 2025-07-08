@@ -214,6 +214,16 @@ function build() {
   console.log(`⚡ JS concatenado: ${(jsSize / 1024).toFixed(2)} KB`);
   console.log(`📅 Build concluído em: ${new Date().toLocaleString()}`);
   console.log('\n✅ Build concluído com sucesso!');
+
+  // Copiar dist/index.html para a raiz do projeto
+  const distIndex = path.join(buildConfig.distDir, 'index.html');
+  const rootIndex = path.join(__dirname, '..', 'index.html');
+  try {
+    fs.copyFileSync(distIndex, rootIndex);
+    console.log('✅ index.html da raiz atualizado com sucesso!');
+  } catch (err) {
+    console.error('❌ Erro ao copiar index.html para a raiz:', err.message);
+  }
 }
 
 // Executar build se chamado diretamente
