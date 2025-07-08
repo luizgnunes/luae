@@ -103,19 +103,20 @@ function processHTML() {
 function build() {
   console.log('🚀 Iniciando build...\n');
 
-  // Concatenar e minificar CSS
-  const cssFiles = [
-    path.join(config.src.css, 'styles.css')
-  ];
+  // Concatenar e minificar TODOS os CSS da pasta src/assets/css
+  const cssDir = config.src.css;
+  const cssFiles = fs.readdirSync(cssDir)
+    .filter(file => file.endsWith('.css'))
+    .map(file => path.join(cssDir, file));
   const cssContent = concatenateFiles(cssFiles);
   fs.writeFileSync('styles.min.css', minifyCSS(cssContent));
   console.log('✓ CSS minificado: styles.min.css');
 
-  // Concatenar e minificar JS
-  const jsFiles = [
-    path.join(config.src.js, 'main.js'),
-    path.join(config.src.js, 'translations.js')
-  ];
+  // Concatenar e minificar TODOS os JS da pasta src/assets/js
+  const jsDir = config.src.js;
+  const jsFiles = fs.readdirSync(jsDir)
+    .filter(file => file.endsWith('.js'))
+    .map(file => path.join(jsDir, file));
   const jsContent = concatenateFiles(jsFiles);
   fs.writeFileSync('script.min.js', minifyJS(jsContent));
   console.log('✓ JavaScript minificado: script.min.js');

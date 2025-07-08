@@ -25,6 +25,88 @@ function initDOMCache() {
   domCache.tarotLoading = document.getElementById('tarot-loading');
 }
 
+// Função para inicializar carrossel de depoimentos
+function initCarousel() {
+  const relatos = document.querySelectorAll('.carrossel-relatos .relato');
+  const indicadoresContainer = document.querySelector('.indicadores-carrossel');
+  
+  if (!relatos.length || !indicadoresContainer) {
+    console.log('⚠️ Elementos do carrossel não encontrados');
+    return;
+  }
+
+  let currentIndex = 0;
+  let interval;
+
+  // Criar indicadores
+  relatos.forEach((_, index) => {
+    const indicador = document.createElement('div');
+    indicador.className = 'bolinha';
+    if (index === 0) indicador.classList.add('ativa');
+    indicador.addEventListener('click', () => goToSlide(index));
+    indicadoresContainer.appendChild(indicador);
+  });
+
+  // Função para ir para slide específico
+  function goToSlide(index) {
+    if (index < 0 || index >= relatos.length) return;
+    
+    // Remover classes ativas
+    relatos.forEach(relato => {
+      relato.classList.remove('foco', 'blur');
+    });
+    document.querySelectorAll('.indicadores-carrossel .bolinha').forEach(bolinha => {
+      bolinha.classList.remove('ativa');
+    });
+
+    // Aplicar classes
+    relatos[index].classList.add('foco');
+    document.querySelectorAll('.indicadores-carrossel .bolinha')[index].classList.add('ativa');
+    
+    // Aplicar blur nos outros
+    relatos.forEach((relato, i) => {
+      if (i !== index) {
+        relato.classList.add('blur');
+      }
+    });
+
+    currentIndex = index;
+  }
+
+  // Função para próximo slide
+  function nextSlide() {
+    const nextIndex = (currentIndex + 1) % relatos.length;
+    goToSlide(nextIndex);
+  }
+
+  // Iniciar carrossel
+  function startCarousel() {
+    interval = setInterval(nextSlide, 4000); // 4 segundos
+  }
+
+  // Parar carrossel
+  function stopCarousel() {
+    if (interval) {
+      clearInterval(interval);
+    }
+  }
+
+  // Event listeners para pausar no hover
+  const carrosselContainer = document.querySelector('.carrossel-relatos');
+  if (carrosselContainer) {
+    carrosselContainer.addEventListener('mouseenter', stopCarousel);
+    carrosselContainer.addEventListener('mouseleave', startCarousel);
+  }
+
+  // Inicializar primeiro slide
+  goToSlide(0);
+  
+  // Iniciar carrossel automático
+  startCarousel();
+
+  console.log('✅ Carrossel de depoimentos inicializado');
+}
+
 // Função para scroll suave
 function smoothScrollTo(target, offset = 70) {
   if (target) {
@@ -35,7 +117,7 @@ function smoothScrollTo(target, offset = 70) {
   }
 }
 
-// Função para debounce (otimização de performance)
+// Função debounce para otimização
 function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -97,4 +179,7 @@ function enableButton(button) {
   if (elementExists(button)) {
     button.disabled = false;
   }
-} 
+}
+
+// Exportar função para uso global
+window.initCarousel = initCarousel; 
