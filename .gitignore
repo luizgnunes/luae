@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Build output (não existe mais, mas por segurança)
+dist/
+
+# Arquivos temporários e de sistema
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# Backups e arquivos locais
+backup/
+.env
+
+# Scripts de build/dev (não necessários no host)
+scripts/
+
+# Testes e arquivos de desenvolvimento
+test-language.html 

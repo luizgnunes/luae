@@ -191,4 +191,19 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 
 ---
 
+## 🚨 AVISO IMPORTANTE SOBRE O FLUXO DE DESENVOLVIMENTO E DEPLOY
+
+- **Sempre faça suas alterações nos arquivos dentro da pasta `src/`** (HTML, CSS, JS, imagens, etc).
+- **NUNCA edite manualmente os arquivos da raiz do projeto** (ex: `index.html`, `script.min.js`, `styles.min.css`).
+- **Após editar, rode `npm run build`** para gerar/atualizar os arquivos finais na raiz.
+- **O Hostinger serve os arquivos da raiz** — é isso que vai para produção.
+- **A pasta `dist/` foi removida** e não deve ser usada. Ignore qualquer instrução antiga que mencione `dist`.
+
+**Resumo do fluxo:**
+1. Edite em `src/`
+2. Rode `npm run build`
+3. Faça o deploy dos arquivos da raiz
+
+---
+
 **Desenvolvido com ❤️ para Luaé Tarot** 
