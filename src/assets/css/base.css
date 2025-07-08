@@ -1,0 +1,49 @@
+/* ===== BASE STYLES ===== */
+/* Reset e estilos fundamentais */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f9f7f6;
+  color: #091336;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* Tipografia base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #091336;
+  font-weight: 700;
+}
+
+p, ul, blockquote {
+  font-size: 1.05rem;
+  color: inherit;
+  margin-bottom: 1rem;
+}
+
+/* Links base */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s, background 0.2s;
+}
+
+/* Imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container base */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+} 

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luaé Tarot</title>
+    <meta name="description" content="Descubra o que os oráculos têm a revelar! Tiragem de tarot grátis, consultas espirituais, relatos de clientes e agendamento com Luaé.">
+    <meta name="keywords" content="tarot, tarot online, tiragem de tarot, consulta espiritual, Luaé, taróloga, espiritualidade, cartas de tarot, tarot grátis">
+    <meta property="og:title" content="Luaé Tarot | Tiragem de Tarot Grátis, Consultas e Espiritualidade">
+    <meta property="og:description" content="Descubra o que os oráculos têm a revelar! Tiragem de tarot grátis, consultas espirituais, relatos de clientes e agendamento com Luaé.">
+    <meta property="og:image" content="https://tarotluae.com/images/optimized/inicio.png">
+    <meta property="og:url" content="https://tarotluae.com/">
+    <meta property="og:type" content="website">
+    
+    <!-- Preload recursos críticos -->
+    <link rel="preload" href="images/optimized/inicio.png" as="image">
+    <link rel="preload" href="styles.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@500;700&display=swap" as="style">
+    
+    <link rel="icon" type="image/png" href="images/optimized/favicon.png">
+    <link rel="stylesheet" href="styles.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src *; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src fonts.gstatic.com; script-src 'self' 'unsafe-inline';">
+  </head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#inicio">Luaé</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#porque">Tarot</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#clientes">Clientes</a></li>
+      <li><a href="#agende">Agende</a></li>
+    </ul>
+  </nav>
+
+  <section id="inicio" class="hero-section">
+    <div class="hero-content">
+      <img src="images/optimized/inicio.png" alt="Ilustração espiritual do tarot" class="hero-img" loading="eager">
+      <img src="images/optimized/favicon.png" alt="Logo Luaé Tarot" class="hero-logo" style="width: 100px; height: 100px; background: transparent; border: 3px solid rgba(255,255,255,0.3); border-radius: 50%;" loading="lazy">
+      <div>
+        <h1>Tarot com Luaé</h1>
+        <p class="frase">Descubra o que os oráculos têm a revelar sobre sua jornada</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="section-light">
+    <div class="section-content">
+      <div class="icon-circle">
+        <img src="https://img.icons8.com/external-others-maxicons/62/external-moon-celestial-and-witchcraft-others-maxicons-10.png" alt="Lua" class="icon-img" width="40" height="40" loading="lazy" />
+      </div>
+      <div>
+        <h2>Sobre Luaé</h2>
+        <p>Desde a <strong>infância</strong>, percebo <strong>vozes e presenças</strong> que não pertencem a este plano — algo natural para mim, embora estranho para quem me cercava. Sempre fui muito <strong>criativa</strong>, com <strong>dons artísticos e espirituais</strong> que se manifestaram desde cedo.</p>
+
+        <p>Quando eu era mais nova, vivendo na <strong>Inglaterra</strong>, minha <strong>mediunidade</strong> se intensificou. Passei a captar com clareza <strong>mensagens espirituais</strong> e sentimentos de pessoas ao meu redor. De volta ao Brasil, fui iniciada no culto tradicional em <strong>Obatalá, Exu</strong> e na primeira mão de <strong>Ifá</strong>. Também vivi três anos em <strong>terreiro</strong>, onde aprendi profundamente com a <strong>incorporação</strong>.</p>
+        
+        <p>Hoje, uno <strong>Tarot, mediunidade e arte</strong>. Desenvolvi a <strong>pictografia mediúnica</strong>, através da qual visualizo e desenho os <strong>guias espirituais</strong> das pessoas. Durante as leituras, sou guiada por <strong>entidades</strong> que me orientam com sabedoria — e é com essa <strong>conexão</strong> que entrego cada mensagem com <strong>verdade e amor</strong>.</p>
+    </div>
+  </section>
+
+  <section id="porque" class="section-dark">
+    <div class="section-content">
+      <div class="icon-circle">
+        <img src="https://img.icons8.com/external-others-maxicons/40/external-magic-celestial-and-witchcraft-others-maxicons-4.png" alt="Mágica" class="icon-img" width="40" height="40" loading="lazy" />
+      </div>
+      <div style="width:100%">
+        <h2>Tiragem de Tarot Grátis</h2>
+        <p class="tarot-explica">O tarot é um espelho da alma. Ele revela caminhos, ilumina dúvidas e traz respostas para o presente. Consultar o tarot é um convite para enxergar além do óbvio e se reconectar com sua essência.</p>
+        <p>Conecte-se com a energia dos Arcanos Maiores. <strong>Feche os olhos, mentalize um tema ou questão e clique para tirar sua carta.</strong></p>
+        <div class="tiragem-tarot">
+          <button id="btn-tirar-carta" class="btn-main">Tirar uma carta</button>
+          <div id="tarot-loading" class="tarot-loading" style="display:none;align-items:center;justify-content:center;flex-direction:column;gap:0.7em;min-height:60px;">
+            <div class="spinner"></div>
+            <span>Conectando com o universo...</span>
+          </div>
+          <div id="carta-tirada" class="carta-tirada" style="display:none;">
+            <img id="img-carta" src="" alt="Carta do Tarot" class="img-carta-tirada" loading="lazy">
+            <div class="nome-carta" id="nome-carta"></div>
+            <div class="mensagem-carta" id="mensagem-carta"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="section-light">
+    <h2 class="servicos-titulo">Como posso te ajudar?</h2>
+    <div class="servicos-grid">
+      <div class="servico-card">
+        <img src="https://img.icons8.com/external-others-maxicons/62/external-sun-celestial-and-witchcraft-others-maxicons-4.png" alt="Pergunta Objetiva" class="servico-icone" loading="lazy">
+        <h3>Pergunta Objetiva</h3>
+        <p>Responda uma dúvida rápida (Sim ou Não).</p>
+        <div class="servico-preco">R$15 <span class="preco-desc">(sem conselho)</span><br>R$30 <span class="preco-desc">(com conselho)</span></div>
+      </div>
+      <div class="servico-card">
+        <img src="https://img.icons8.com/external-others-maxicons/62/external-magic-celestial-and-witchcraft-others-maxicons-4.png" alt="Tema Específico" class="servico-icone" loading="lazy">
+        <h3>Tema Específico</h3>
+        <p>Leitura aprofundada sobre um tema (amor, carreira, espiritualidade...)</p>
+        <div class="servico-preco">R$80</div>
+      </div>
+      <div class="servico-card">
+        <img src="https://img.icons8.com/external-others-maxicons/62/external-moon-celestial-and-witchcraft-others-maxicons-11.png" alt="Cruz da Vida" class="servico-icone" loading="lazy">
+        <h3>Cruz da Vida</h3>
+        <p>Leitura completa sobre áreas-chave da sua vida.</p>
+        <div class="servico-preco">R$120</div>
+      </div>
+      <div class="servico-card">
+        <img src="https://img.icons8.com/external-others-maxicons/62/external-bright-celestial-and-witchcraft-others-maxicons-2.png" alt="Consulta ao Vivo" class="servico-icone" loading="lazy">
+        <h3>Consulta ao Vivo por Vídeo</h3>
+        <p>Interpretação ao vivo e interação direta (30-40 min).</p>
+        <div class="servico-preco">R$210</div>
+      </div>
+    </div>
+    <div class="servico-pagamento">
+      <small>Ao clicar, envie uma mensagem direta no Instagram informando o serviço desejado.<br>
+      Pagamento antecipado via Pix ou transferência.<br>
+      Em caso de ausência do cliente no horário marcado, o valor não será reembolsado.</small>
+      <div style="text-align: center; margin-top: 10px;">
+        <a href="https://www.instagram.com/tarotluae?igsh=MXU4dTR3eXltOGdwMg%3D%3D&utm_source=qr" class="btn-main btn-servico btn-instagram" target="_blank" rel="noopener" aria-label="Agendar consulta de tarot pelo Instagram">
+          <svg class="icon-instagram" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          Agendar pelo Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="clientes" class="section-dark">
+    <div class="section-content depoimentos-content">
+      <div class="icon-circle">
+        <img src="https://img.icons8.com/external-others-maxicons/62/external-constellation-celestial-and-witchcraft-others-maxicons.png" alt="Estrela" class="icon-img" width="40" height="40" loading="lazy" />
+      </div>
+      <div class="carrossel-clientes">
+        <h2>Clientes</h2>
+        <div class="carrossel-relatos">
+          <blockquote class="relato ativo">"A consulta com Luaé foi um divisor de águas na minha vida. Recomendo de olhos fechados!"<br><span class="nome-feedback">Ana P.</span></blockquote>
+          <blockquote class="relato">"Senti acolhimento e verdade em cada palavra. O tarot me trouxe paz e direção."<br><span class="nome-feedback">Beatriz S.</span></blockquote>
+          <blockquote class="relato">"A sensibilidade e a conexão da Luaé são impressionantes. Saí da consulta renovada!"<br><span class="nome-feedback">Camila R.</span></blockquote>
+          <blockquote class="relato">"Nunca me senti tão compreendida. O tarot da Luaé é diferente de tudo que já vivi."<br><span class="nome-feedback">Lucas M.</span></blockquote>
+        </div>
+        <div class="indicadores-carrossel"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="agende" class="section-cta">
+    <div class="cta-content">
+      <h2>Pronto para sua jornada?</h2>
+      <p>Agende sua consulta e permita-se viver uma experiência transformadora.<br><b>Agende por DM no Instagram</b>.</p>
+      <a href="https://www.instagram.com/tarotluae?igsh=MXU4dTR3eXltOGdwMg%3D%3D&utm_source=qr" class="btn-main btn-servico btn-instagram" target="_blank" rel="noopener" aria-label="Agendar consulta de tarot pelo Instagram">
+        <svg class="icon-instagram" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+        Agendar pelo Instagram
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div>
+      <a href="politica-privacidade.html" target="_blank">Política de Privacidade</a> |
+      <a href="termos-de-uso.html" target="_blank">Termos de Uso</a>
+    </div>
+    <div style="margin-top:0.5em; color:#888; font-size:0.97em;">&copy; Luaé Tarot 2025</div>
+  </footer>
+
+  <script src="script.min.js"></script>
+  
+  <!-- Service Worker para cache avançado -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('Service Worker registrado com sucesso:', registration.scope);
+          })
+          .catch(error => {
+            console.log('Falha no registro do Service Worker:', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html> 

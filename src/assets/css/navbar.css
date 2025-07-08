@@ -1,0 +1,85 @@
+/* ===== NAVBAR STYLES ===== */
+/* Navegação principal */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(9,19,54,0.04);
+  z-index: 1000;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #e5e0dc;
+  overflow-x: auto;
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #091336;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+}
+
+.navbar a:hover {
+  background: #e9eaf3;
+  color: #091336;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .navbar ul {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .navbar {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar ul {
+    gap: 0.8rem;
+  }
+  
+  .navbar a {
+    font-size: 0.9rem;
+    padding: 0.15rem 0.4rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .navbar ul {
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 0.3rem;
+  }
+  
+  .navbar a {
+    font-size: 0.85rem;
+    padding: 0.1rem 0.3rem;
+    white-space: nowrap;
+  }
+} 

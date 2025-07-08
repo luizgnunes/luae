@@ -1,0 +1,53 @@
+/* ===== FOOTER ===== */
+/* Rodapé do site */
+
+.site-footer {
+  background: #091336;
+  color: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #e9eaf3;
+}
+
+.footer-sep {
+  color: #666;
+  margin: 0 0.5rem;
+}
+
+.footer-copy {
+  color: #888;
+  font-size: 0.97em;
+  margin-top: 0.5em;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer-sep {
+    display: none;
+  }
+} 

@@ -1,0 +1,96 @@
+/* ===== TESTIMONIALS SECTION ===== */
+/* Carrossel de depoimentos */
+
+.carrossel-clientes {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carrossel-relatos {
+  position: relative;
+  min-height: 320px;
+  max-width: 600px;
+  margin: 2rem auto;
+  width: 100%;
+}
+
+.relato {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 420px;
+  min-width: 260px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.7s ease;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: inherit;
+  font-style: italic;
+  padding: 1.3rem 1.7rem;
+  background: rgba(255,255,255,0.7);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(9,19,54,0.08);
+  text-align: center;
+}
+
+.relato.ativo {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.relato.saindo {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.nome-feedback {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #091336;
+  font-size: 0.95rem;
+}
+
+/* Indicadores do carrossel */
+.indicadores-carrossel {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.indicadores-carrossel .bolinha {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d3d6e6;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.indicadores-carrossel .bolinha.ativa {
+  background: #091336;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .carrossel-clientes {
+    padding: 0 0.3rem;
+  }
+  
+  .relato {
+    font-size: 1rem;
+    padding: 0.8rem 0.5rem;
+    max-width: 98vw;
+    min-width: unset;
+  }
+  .carrossel-relatos {
+    min-height: 380px;
+    max-width: 98vw;
+  }
+} 

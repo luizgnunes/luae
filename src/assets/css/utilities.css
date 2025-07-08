@@ -1,0 +1,86 @@
+/* ===== UTILITIES ===== */
+/* Estilos utilitários e componentes especiais */
+
+/* Banner de cookies */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #091336;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  z-index: 10000;
+  box-shadow: 0 -2px 16px rgba(9,19,54,0.2);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cookie-banner button {
+  background: #e9eaf3;
+  color: #091336;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.2s ease;
+}
+
+.cookie-banner button:hover {
+  background: #d3d6e6;
+}
+
+/* Classes utilitárias */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .cookie-banner {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .cookie-banner button {
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    padding: 0.4rem 1.2rem;
+    font-size: 0.85rem;
+  }
+} 

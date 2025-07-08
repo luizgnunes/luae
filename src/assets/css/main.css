@@ -1,0 +1,50 @@
+/* ===== LUAE TAROT - MAIN CSS ===== */
+/* Arquivo principal que importa todos os módulos */
+
+/* Importar todos os módulos CSS */
+@import url('base.css');
+@import url('layout.css');
+@import url('navbar.css');
+@import url('hero.css');
+@import url('components.css');
+@import url('services.css');
+@import url('testimonials.css');
+@import url('tarot.css');
+@import url('footer.css');
+@import url('utilities.css');
+
+/* ===== CUSTOMIZAÇÕES ESPECÍFICAS ===== */
+/* Estilos específicos que não se encaixam nos módulos */
+
+/* Melhorias de acessibilidade */
+:focus {
+  outline: 2px solid #091336;
+  outline-offset: 2px;
+}
+
+/* Melhorias de performance */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animações suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Melhorias de impressão */
+@media print {
+  .navbar,
+  .btn-main,
+  .btn-servico,
+  .btn-instagram,
+  .cookie-banner {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+} 

@@ -1,0 +1,87 @@
+/* ===== SERVICES SECTION ===== */
+/* Seção de serviços */
+
+.servicos-titulo {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #091336;
+  margin-bottom: 2.5rem;
+  padding: 0 1rem;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.servico-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(9,19,54,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e5e0dc;
+}
+
+.servico-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 32px rgba(9,19,54,0.12);
+}
+
+.servico-icone {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem auto;
+  display: block;
+}
+
+.servico-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #091336;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.servico-card p {
+  color: #091336;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.servico-preco {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #091336;
+  margin-bottom: 1rem;
+}
+
+.preco-desc {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .servico-card {
+    padding: 1.5rem;
+  }
+} 

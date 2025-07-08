@@ -1,0 +1,970 @@
+/* ===== LUAE TAROT - CSS CONCATENADO ===== */
+/* Build: 2025-07-08T02:07:57.461Z */
+
+/* === base.css === */
+/* ===== BASE STYLES ===== */
+/* Reset e estilos fundamentais */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f9f7f6;
+  color: #091336;
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* Tipografia base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #091336;
+  font-weight: 700;
+}
+
+p, ul, blockquote {
+  font-size: 1.05rem;
+  color: inherit;
+  margin-bottom: 1rem;
+}
+
+/* Links base */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s, background 0.2s;
+}
+
+/* Imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container base */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+} 
+
+/* === layout.css === */
+/* ===== LAYOUT STYLES ===== */
+/* Estrutura geral e seções */
+
+/* Seções base */
+.section-light {
+  background: #f9f7f6;
+  padding: 2.5rem 1.5rem;
+}
+
+.section-dark {
+  background: #e9eaf3;
+  color: #091336;
+  padding: 2.5rem 1.5rem;
+}
+
+.section-cta {
+  background: #f6f1ee;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+/* Conteúdo das seções */
+.section-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.section-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+/* Círculo de ícone */
+.section-content > .icon-circle {
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+  border-radius: 50%;
+  background: #e9eaf3;
+  color: #091336;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(9,19,54,0.04);
+}
+
+.section-dark .icon-circle {
+  background: #f6f1ee;
+  color: #091336;
+}
+
+.icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* CTA Content */
+.cta-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #091336;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #091336;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .section-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .section-content > .icon-circle {
+    margin: 0 auto 1rem auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-light, .section-dark, .section-cta {
+    padding: 2rem 1rem;
+  }
+  
+  .section-content h2, .cta-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .section-content p, .section-content ul, .section-content blockquote, .cta-content p {
+    font-size: 1rem;
+  }
+  
+  .section-content > .icon-circle {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .icon-img {
+    width: 30px;
+    height: 30px;
+  }
+} 
+
+/* === navbar.css === */
+/* ===== NAVBAR STYLES ===== */
+/* Navegação principal */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(9,19,54,0.04);
+  z-index: 1000;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #e5e0dc;
+  overflow-x: auto;
+}
+
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #091336;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+}
+
+.navbar a:hover {
+  background: #e9eaf3;
+  color: #091336;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .navbar ul {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .navbar {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar ul {
+    gap: 0.8rem;
+  }
+  
+  .navbar a {
+    font-size: 0.9rem;
+    padding: 0.15rem 0.4rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .navbar ul {
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 0.3rem;
+  }
+  
+  .navbar a {
+    font-size: 0.85rem;
+    padding: 0.1rem 0.3rem;
+    white-space: nowrap;
+  }
+} 
+
+/* === hero.css === */
+/* ===== HERO SECTION ===== */
+/* Seção principal */
+
+.hero-section {
+  background: #f6f1ee;
+  padding: 5.5rem 1.5rem 2.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 35vh;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #091336;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.frase {
+  font-size: 1.1rem;
+  color: #091336;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero-img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(9,19,54,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(9,19,54,0.15);
+}
+
+.hero-logo {
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(9,19,54,0.1);
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 4rem 1rem 2rem 1rem;
+    min-height: 30vh;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .frase {
+    font-size: 1rem;
+  }
+  
+  .hero-img {
+    max-width: 250px;
+  }
+} 
+
+/* === components.css === */
+/* ===== COMPONENTS ===== */
+/* Botões e componentes reutilizáveis */
+
+/* Botão principal */
+.btn-main {
+  display: inline-block;
+  background: #e9eaf3;
+  color: #091336;
+  border: none;
+  border-radius: 24px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(9,19,54,0.04);
+}
+
+.btn-main:hover {
+  background: #d3d6e6;
+  color: #091336;
+}
+
+/* Botão de serviço */
+.btn-servico {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #e9eaf3;
+  color: #091336;
+  border: none;
+  border-radius: 24px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(9,19,54,0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-servico:hover {
+  background: #d3d6e6;
+  color: #091336;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(9,19,54,0.1);
+}
+
+/* Botão Instagram */
+.btn-instagram {
+  background: #091336;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(9,19,54,0.04);
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-instagram:hover,
+.btn-instagram:focus {
+  background: #ffe6a7;
+  color: #091336;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(9,19,54,0.15);
+}
+
+.btn-instagram:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(9,19,54,0.04);
+}
+
+.icon-instagram {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  color: inherit;
+}
+
+.btn-instagram:hover .icon-instagram {
+  transform: scale(1.1);
+}
+
+.btn-instagram:focus {
+  outline: 2px solid #091336;
+  outline-offset: 2px;
+}
+
+/* Lista de serviços */
+.servicos-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0;
+}
+
+.servicos-list li {
+  margin-bottom: 0.6rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.servicos-list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: #091336;
+  font-size: 1.1rem;
+}
+
+.servicos-list strong {
+  color: #091336;
+  font-weight: 700;
+  font-size: 1.08em;
+}
+
+.servico-desc {
+  color: #091336;
+  font-weight: 400;
+}
+
+.servico-pagamento {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f6f1ee;
+  border-radius: 12px;
+}
+
+.servico-pagamento small {
+  color: #091336;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .btn-main, .btn-servico, .btn-instagram {
+    padding: 0.6rem 1.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .icon-instagram {
+    width: 18px;
+    height: 18px;
+  }
+} 
+
+/* === services.css === */
+/* ===== SERVICES SECTION ===== */
+/* Seção de serviços */
+
+.servicos-titulo {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #091336;
+  margin-bottom: 2.5rem;
+  padding: 0 1rem;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.servico-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(9,19,54,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e5e0dc;
+}
+
+.servico-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 32px rgba(9,19,54,0.12);
+}
+
+.servico-icone {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem auto;
+  display: block;
+}
+
+.servico-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #091336;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.servico-card p {
+  color: #091336;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.servico-preco {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #091336;
+  margin-bottom: 1rem;
+}
+
+.preco-desc {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .servico-card {
+    padding: 1.5rem;
+  }
+} 
+
+/* === testimonials.css === */
+/* ===== TESTIMONIALS SECTION ===== */
+/* Carrossel de depoimentos */
+
+.carrossel-clientes {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.carrossel-relatos {
+  position: relative;
+  min-height: 320px;
+  max-width: 600px;
+  margin: 2rem auto;
+  width: 100%;
+}
+
+.relato {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 420px;
+  min-width: 260px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.7s ease;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: inherit;
+  font-style: italic;
+  padding: 1.3rem 1.7rem;
+  background: rgba(255,255,255,0.7);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(9,19,54,0.08);
+  text-align: center;
+}
+
+.relato.ativo {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.relato.saindo {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.nome-feedback {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #091336;
+  font-size: 0.95rem;
+}
+
+/* Indicadores do carrossel */
+.indicadores-carrossel {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.indicadores-carrossel .bolinha {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d3d6e6;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.indicadores-carrossel .bolinha.ativa {
+  background: #091336;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .carrossel-clientes {
+    padding: 0 0.3rem;
+  }
+  
+  .relato {
+    font-size: 1rem;
+    padding: 0.8rem 0.5rem;
+    max-width: 98vw;
+    min-width: unset;
+  }
+  .carrossel-relatos {
+    min-height: 380px;
+    max-width: 98vw;
+  }
+} 
+
+/* === tarot.css === */
+/* ===== TAROT SECTION ===== */
+/* Funcionalidade do tarot */
+
+.tiragem-tarot {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+#btn-tirar-carta {
+  background: #091336;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(9,19,54,0.08);
+  margin-bottom: 2rem;
+}
+
+#btn-tirar-carta:hover,
+#btn-tirar-carta:focus {
+  background: #ffe6a7;
+  color: #091336;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(9,19,54,0.12);
+}
+
+#btn-tirar-carta:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading do tarot */
+.tarot-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-height: 120px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e9eaf3;
+  border-top: 4px solid #091336;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.tarot-loading span {
+  color: #091336;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Carta tirada */
+.carta-tirada {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(9,19,54,0.12);
+  max-width: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.5s ease;
+}
+
+.carta-tirada.mostrar {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.img-carta-tirada {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(9,19,54,0.1);
+}
+
+.nome-carta {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #091336;
+  text-align: center;
+}
+
+.mensagem-carta {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #091336;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .carta-tirada {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .img-carta-tirada {
+    width: 150px;
+  }
+} 
+
+/* === footer.css === */
+/* ===== FOOTER ===== */
+/* Rodapé do site */
+
+.site-footer {
+  background: #091336;
+  color: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #e9eaf3;
+}
+
+.footer-sep {
+  color: #666;
+  margin: 0 0.5rem;
+}
+
+.footer-copy {
+  color: #888;
+  font-size: 0.97em;
+  margin-top: 0.5em;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer-sep {
+    display: none;
+  }
+} 
+
+/* === utilities.css === */
+/* ===== UTILITIES ===== */
+/* Estilos utilitários e componentes especiais */
+
+/* Banner de cookies */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #091336;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  z-index: 10000;
+  box-shadow: 0 -2px 16px rgba(9,19,54,0.2);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cookie-banner button {
+  background: #e9eaf3;
+  color: #091336;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.2s ease;
+}
+
+.cookie-banner button:hover {
+  background: #d3d6e6;
+}
+
+/* Classes utilitárias */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .cookie-banner {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .cookie-banner button {
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    padding: 0.4rem 1.2rem;
+    font-size: 0.85rem;
+  }
+} 
+

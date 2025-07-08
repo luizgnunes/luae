@@ -1,0 +1,39 @@
+{
+  "name": "luae-tarot",
+  "version": "1.0.0",
+  "description": "Site profissional de tarot da Luaé",
+  "main": "index.html",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "build:minify": "node scripts/build.js && node scripts/minify.js",
+    "build:full": "node scripts/optimize-images.js && node scripts/build.js && node scripts/minify.js",
+    "dev": "node scripts/dev-server.js",
+    "optimize-images": "node scripts/optimize-images.js",
+    "minify": "node scripts/minify.js",
+    "clean": "node scripts/clean.js",
+    "deploy": "npm run build:full && node scripts/deploy.js",
+    "deploy:netlify": "npm run build:full && node scripts/deploy.js netlify",
+    "deploy:vercel": "npm run build:full && node scripts/deploy.js vercel",
+    "deploy:ftp": "npm run build:full && node scripts/deploy.js ftp",
+    "deploy:manual": "npm run build:full && node scripts/deploy.js manual",
+    "test": "node scripts/test.js"
+  },
+  "keywords": [
+    "tarot",
+    "spiritual",
+    "website",
+    "luaé",
+    "consultation"
+  ],
+  "author": "Luaé Tarot",
+  "license": "MIT",
+  "dependencies": {
+    "sharp": "^0.34.2"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.17.4"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

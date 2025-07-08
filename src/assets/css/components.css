@@ -1,0 +1,167 @@
+/* ===== COMPONENTS ===== */
+/* Botões e componentes reutilizáveis */
+
+/* Botão principal */
+.btn-main {
+  display: inline-block;
+  background: #e9eaf3;
+  color: #091336;
+  border: none;
+  border-radius: 24px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(9,19,54,0.04);
+}
+
+.btn-main:hover {
+  background: #d3d6e6;
+  color: #091336;
+}
+
+/* Botão de serviço */
+.btn-servico {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #e9eaf3;
+  color: #091336;
+  border: none;
+  border-radius: 24px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(9,19,54,0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-servico:hover {
+  background: #d3d6e6;
+  color: #091336;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(9,19,54,0.1);
+}
+
+/* Botão Instagram */
+.btn-instagram {
+  background: #091336;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(9,19,54,0.04);
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-instagram:hover,
+.btn-instagram:focus {
+  background: #ffe6a7;
+  color: #091336;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(9,19,54,0.15);
+}
+
+.btn-instagram:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(9,19,54,0.04);
+}
+
+.icon-instagram {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  color: inherit;
+}
+
+.btn-instagram:hover .icon-instagram {
+  transform: scale(1.1);
+}
+
+.btn-instagram:focus {
+  outline: 2px solid #091336;
+  outline-offset: 2px;
+}
+
+/* Lista de serviços */
+.servicos-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0;
+}
+
+.servicos-list li {
+  margin-bottom: 0.6rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.servicos-list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: #091336;
+  font-size: 1.1rem;
+}
+
+.servicos-list strong {
+  color: #091336;
+  font-weight: 700;
+  font-size: 1.08em;
+}
+
+.servico-desc {
+  color: #091336;
+  font-weight: 400;
+}
+
+.servico-pagamento {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f6f1ee;
+  border-radius: 12px;
+}
+
+.servico-pagamento small {
+  color: #091336;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .btn-main, .btn-servico, .btn-instagram {
+    padding: 0.6rem 1.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .icon-instagram {
+    width: 18px;
+    height: 18px;
+  }
+} 

@@ -1,0 +1,121 @@
+/* ===== LAYOUT STYLES ===== */
+/* Estrutura geral e seções */
+
+/* Seções base */
+.section-light {
+  background: #f9f7f6;
+  padding: 2.5rem 1.5rem;
+}
+
+.section-dark {
+  background: #e9eaf3;
+  color: #091336;
+  padding: 2.5rem 1.5rem;
+}
+
+.section-cta {
+  background: #f6f1ee;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+/* Conteúdo das seções */
+.section-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.section-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+/* Círculo de ícone */
+.section-content > .icon-circle {
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+  border-radius: 50%;
+  background: #e9eaf3;
+  color: #091336;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(9,19,54,0.04);
+}
+
+.section-dark .icon-circle {
+  background: #f6f1ee;
+  color: #091336;
+}
+
+.icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* CTA Content */
+.cta-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #091336;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #091336;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .section-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .section-content > .icon-circle {
+    margin: 0 auto 1rem auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-light, .section-dark, .section-cta {
+    padding: 2rem 1rem;
+  }
+  
+  .section-content h2, .cta-content h2 {
+    font-size: 1.3rem;
+  }
+  
+  .section-content p, .section-content ul, .section-content blockquote, .cta-content p {
+    font-size: 1rem;
+  }
+  
+  .section-content > .icon-circle {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .icon-img {
+    width: 30px;
+    height: 30px;
+  }
+} 
