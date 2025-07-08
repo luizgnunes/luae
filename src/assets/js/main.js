@@ -2,7 +2,7 @@
 /* Arquivo principal que inicializa todos os módulos */
 
 // Cache de elementos DOM para melhor performance
-const domCache = {
+window.domCache = {
   navLinks: null,
   cartas: null,
   descDiv: null,
