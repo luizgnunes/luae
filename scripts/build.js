@@ -224,6 +224,26 @@ function build() {
   } catch (err) {
     console.error('❌ Erro ao copiar index.html para a raiz:', err.message);
   }
+
+  // Copiar dist/styles.min.css para a raiz do projeto
+  const distCSS = path.join(buildConfig.distDir, 'styles.min.css');
+  const rootCSS = path.join(__dirname, '..', 'styles.min.css');
+  try {
+    fs.copyFileSync(distCSS, rootCSS);
+    console.log('✅ styles.min.css da raiz atualizado com sucesso!');
+  } catch (err) {
+    console.error('❌ Erro ao copiar styles.min.css para a raiz:', err.message);
+  }
+
+  // Copiar dist/script.min.js para a raiz do projeto
+  const distJS = path.join(buildConfig.distDir, 'script.min.js');
+  const rootJS = path.join(__dirname, '..', 'script.min.js');
+  try {
+    fs.copyFileSync(distJS, rootJS);
+    console.log('✅ script.min.js da raiz atualizado com sucesso!');
+  } catch (err) {
+    console.error('❌ Erro ao copiar script.min.js para a raiz:', err.message);
+  }
 }
 
 // Executar build se chamado diretamente
