@@ -9,6 +9,7 @@ const buildConfig = {
   srcDir: './src',
   distDir: './dist',
   cssFiles: [
+    'styles.css',
     'base.css',
     'layout.css', 
     'navbar.css',
@@ -229,7 +230,11 @@ function build() {
   const distCSS = path.join(buildConfig.distDir, 'styles.min.css');
   const rootCSS = path.join(__dirname, '..', 'styles.min.css');
   try {
+    const distContent = fs.readFileSync(distCSS, 'utf8');
+    console.log('--- styles.min.css (dist) início ---\n' + distContent.slice(0, 300) + '\n--- fim preview dist ---');
     fs.copyFileSync(distCSS, rootCSS);
+    const rootContent = fs.readFileSync(rootCSS, 'utf8');
+    console.log('--- styles.min.css (raiz) início ---\n' + rootContent.slice(0, 300) + '\n--- fim preview raiz ---');
     console.log('✅ styles.min.css da raiz atualizado com sucesso!');
   } catch (err) {
     console.error('❌ Erro ao copiar styles.min.css para a raiz:', err.message);

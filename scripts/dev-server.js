@@ -10,7 +10,7 @@ const url = require('url');
 const serverConfig = {
   port: 3000,
   host: 'localhost',
-  rootDir: './dist' // Alterado de './src' para './dist'
+  rootDir: '.' // agora serve a pasta raiz do projeto
 };
 
 // MIME types

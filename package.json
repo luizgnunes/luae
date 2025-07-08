@@ -16,7 +16,8 @@
     "deploy:vercel": "npm run build:full && node scripts/deploy.js vercel",
     "deploy:ftp": "npm run build:full && node scripts/deploy.js ftp",
     "deploy:manual": "npm run build:full && node scripts/deploy.js manual",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "dev:watch": "nodemon --watch src --ext css,js,html --exec \"npm run build\""
   },
   "keywords": [
     "tarot",
@@ -31,6 +32,7 @@
     "sharp": "^0.34.2"
   },
   "devDependencies": {
+    "nodemon": "^3.1.10",
     "uglify-js": "^3.17.4"
   },
   "engines": {
