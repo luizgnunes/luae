@@ -556,8 +556,9 @@ body {
 }
 
 .site-footer {
-  background: #f6f1ee;
-  border-top: 1px solid #e5e0dc;
+  background: #091336;
+  color: #fff;
+  border-top: 1px solid #22304a;
   padding: 2.2rem 1rem 1.2rem 1rem;
   text-align: center;
   margin-top: 2.5rem;
@@ -572,23 +573,23 @@ body {
   margin-bottom: 0.7em;
 }
 .footer-links a {
-  color: #6a5acd;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s, border-bottom 0.2s;
   border-bottom: 1px solid transparent;
 }
 .footer-links a:hover {
-  color: #22304a;
-  border-bottom: 1px solid #22304a;
+  color: #e9eaf3;
+  border-bottom: 1px solid #e9eaf3;
 }
 .footer-sep {
-  color: #c3c6d1;
+  color: #888;
   font-size: 1.1em;
   margin: 0 0.3em;
 }
 .footer-copy {
-  color: #b0b3c6;
+  color: #ccc;
   font-size: 1em;
   margin-top: 0.5em;
   letter-spacing: 0.2px;
@@ -603,7 +604,30 @@ body {
   }
 } 
 
-/* ===== SELETOR DE IDIOMA ===== */
+/* ===== SELETOR DE IDIOMA FLUTUANTE ===== */
+.language-selector-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(9, 19, 54, 0.1);
+  transition: all 0.3s ease;
+}
+
+.language-selector-floating:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Seletor original (mantido para compatibilidade) */
 .language-selector {
   display: flex;
   align-items: center;
@@ -653,6 +677,12 @@ body {
 }
 
 @media (max-width: 768px) {
+  .language-selector-floating {
+    bottom: 15px;
+    right: 15px;
+    padding: 0.4rem;
+  }
+  
   .language-selector {
     margin-left: 0.5rem;
   }
@@ -669,6 +699,12 @@ body {
 }
 
 @media (max-width: 480px) {
+  .language-selector-floating {
+    bottom: 10px;
+    right: 10px;
+    padding: 0.3rem;
+  }
+  
   .language-selector {
     margin-left: 0.3rem;
   }
