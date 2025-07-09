@@ -50,14 +50,30 @@ function getCardTranslation(cardKey, type = 'name') {
   const currentLang = localStorage.getItem('siteLanguage') || 'pt-BR';
   const translationKey = `tarot.${cardKey}.${type}`;
   
+  console.log('🔍 Buscando tradução:', {
+    cardKey,
+    type,
+    currentLang,
+    translationKey,
+    translationsExists: !!window.translations,
+    translationsKeys: window.translations ? Object.keys(window.translations) : 'N/A'
+  });
+  
   if (window.translations && window.translations[currentLang] && window.translations[currentLang][translationKey]) {
-    return window.translations[currentLang][translationKey];
+    const translation = window.translations[currentLang][translationKey];
+    console.log('✅ Tradução encontrada:', translation);
+    return translation;
   }
   
   // Fallback para português se não encontrar tradução
-  return window.translations && window.translations['pt-BR'] && window.translations['pt-BR'][translationKey] 
-    ? window.translations['pt-BR'][translationKey] 
-    : cardKey;
+  if (window.translations && window.translations['pt-BR'] && window.translations['pt-BR'][translationKey]) {
+    const fallbackTranslation = window.translations['pt-BR'][translationKey];
+    console.log('🔄 Usando fallback PT-BR:', fallbackTranslation);
+    return fallbackTranslation;
+  }
+  
+  console.log('❌ Tradução não encontrada, usando cardKey:', cardKey);
+  return cardKey;
 }
 
 // Descrições das cartas
@@ -78,6 +94,8 @@ function preloadImages() {
 
 // Função para inicializar cache DOM e funcionalidades
 function initDOMCache() {
+  console.log('🔍 Inicializando cache DOM...');
+  
   domCache.navLinks = document.querySelectorAll('.navbar a[href^="#"]');
   domCache.cartas = document.querySelectorAll('.carta');
   domCache.descDiv = document.getElementById('descricao-carta');
@@ -89,6 +107,14 @@ function initDOMCache() {
   domCache.nomeCarta = document.getElementById('nome-carta');
   domCache.mensagemCarta = document.getElementById('mensagem-carta');
   domCache.tarotLoading = document.getElementById('tarot-loading');
+
+  console.log('📋 Elementos encontrados:');
+  console.log('- btnTirarCarta:', domCache.btnTirarCarta);
+  console.log('- tarotLoading:', domCache.tarotLoading);
+  console.log('- cartaTiradaDiv:', domCache.cartaTiradaDiv);
+  console.log('- imgCarta:', domCache.imgCarta);
+  console.log('- nomeCarta:', domCache.nomeCarta);
+  console.log('- mensagemCarta:', domCache.mensagemCarta);
 
   // Scroll suave para navegação
   if (domCache.navLinks) {
@@ -120,28 +146,51 @@ function initDOMCache() {
 
   // Event listener para tiragem de tarot (usando cache)
   if (domCache.btnTirarCarta && domCache.tarotLoading && domCache.cartaTiradaDiv && domCache.imgCarta && domCache.nomeCarta && domCache.mensagemCarta) {
+    console.log('✅ Todos os elementos do tarot encontrados, adicionando event listener...');
+    
     domCache.btnTirarCarta.addEventListener('click', () => {
+      console.log('🎯 Botão "tirar carta" clicado!');
+      
       // Esconde carta anterior e mostra loading
       domCache.cartaTiradaDiv.style.display = 'none';
       domCache.tarotLoading.style.display = 'flex';
       domCache.btnTirarCarta.disabled = true;
+      
+      console.log('⏳ Mostrando loading...');
+      
       // Simula conexão com o universo
       setTimeout(() => {
         const idx = Math.floor(Math.random() * arcanos.length);
         const carta = arcanos[idx];
+        
+        console.log('🎴 Carta selecionada:', carta.key);
+        
         domCache.imgCarta.src = carta.img;
         domCache.imgCarta.alt = getCardTranslation(carta.key, 'name');
         domCache.nomeCarta.textContent = getCardTranslation(carta.key, 'name');
         domCache.mensagemCarta.textContent = getCardTranslation(carta.key, 'message');
+        
         domCache.tarotLoading.style.display = 'none';
         domCache.cartaTiradaDiv.style.display = 'flex';
         domCache.cartaTiradaDiv.classList.remove('mostrar');
+        
         setTimeout(() => {
           domCache.cartaTiradaDiv.classList.add('mostrar');
           domCache.btnTirarCarta.disabled = false;
+          console.log('✨ Carta exibida com sucesso!');
         }, 30);
       }, 1500);
     });
+    
+    console.log('✅ Event listener adicionado com sucesso!');
+  } else {
+    console.error('❌ Elementos do tarot não encontrados:');
+    console.error('- btnTirarCarta:', !!domCache.btnTirarCarta);
+    console.error('- tarotLoading:', !!domCache.tarotLoading);
+    console.error('- cartaTiradaDiv:', !!domCache.cartaTiradaDiv);
+    console.error('- imgCarta:', !!domCache.imgCarta);
+    console.error('- nomeCarta:', !!domCache.nomeCarta);
+    console.error('- mensagemCarta:', !!domCache.mensagemCarta);
   }
 
   // Pré-carregar imagens
